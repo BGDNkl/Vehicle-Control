@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="pl">
+    
 <head>
   <meta charset="utf-8">
   <title>Sterowanie Samochodzikiem</title>
@@ -12,18 +12,13 @@
 
   <!-- include bootstrap css -->
   <link rel="stylesheet" href="lib/bootstrap.min.css"/>
-  
-  <!-- Optional JavaScript libs for bootstrap  --> 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <!-- <script src="lib/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
- </head>
 
-<style>
-    body {
+  <style>
+      body {
         height: 100vh;
-        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	    background-size: 400% 400%;
-	    animation: gradient 15s ease infinite;
+        background: linear-gradient(300deg,#e7e418, #62e20c,#81b3e2, #5543f3, #5443f0);
+        background-size: 400% 400%;
+        animation: gradient 25s ease infinite;
     }
 
     #header-container {
@@ -42,11 +37,18 @@
 
     .window-center {
         position: relative; 
+        
+        /* ! Change the stream window size - height, width and left-right margins */
         height: 95%; 
-        width: 70%; 
-        padding: 0px; 
-        margin-left: 15%; 
-        margin-right: 15%;
+        width: 60%; 
+        margin-left: 20%; 
+        margin-right: 20%;
+        
+        padding: 0px;
+        border: solid #292b2c 1px; 
+        border-radius: 15px; 
+        box-shadow: 0 9px #999;
+        overflow: hidden !important;
     }
 
     .btn-custom {
@@ -81,10 +83,6 @@
             background-position: 0% 60%;
         }
     }
-    
-    p {
-        font-family: 'Raleway', sans-serif;
-    }
 
     /* raleway-200 - latin */
     @font-face {
@@ -99,20 +97,9 @@
         url('fonts/raleway-v19-latin-200.ttf') format('truetype'), /* Safari, Android, iOS */
         url('fonts/raleway-v19-latin-200.svg#Raleway') format('svg'); /* Legacy iOS */
     }
-    /* raleway-800 - latin */
-    @font-face {
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 800;
-    src: url('fonts/raleway-v19-latin-800.eot'); /* IE9 Compat Modes */
-    src: local(''),
-        url('fonts/raleway-v19-latin-800.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('fonts/raleway-v19-latin-800.woff2') format('woff2'), /* Super Modern Browsers */
-        url('fonts/raleway-v19-latin-800.woff') format('woff'), /* Modern Browsers */
-        url('fonts/raleway-v19-latin-800.ttf') format('truetype'), /* Safari, Android, iOS */
-        url('fonts/raleway-v19-latin-800.svg#Raleway') format('svg'); /* Legacy iOS */
-    }
-</style>
+
+  </style>
+</head>
 
 <body>
     <div id="header-container">
@@ -124,8 +111,8 @@
         <!-- Stream window -->
         <div class="row">
             <div class="col" style="height: 40vh; margin: auto;">
-                <img src="img/stub.jpg" class="window-center" style="border: solid #292b2c 1px; border-radius: 15px; box-shadow: 0 9px #999;">
-                <!-- <iframe src="http://10.5.57.194:8000/index.html" frameborder="0" scrolling="no" class="window-center" style="border: solid #292b2c 1px; border-radius: 15px; box-shadow: 0 9px #999;"></iframe>             -->
+                <img src="img/stub.jpg" class="window-center">
+                <!-- <iframe src="http://10.5.57.194:8000/index.html" scrolling="no" class="window-center"></iframe>             -->
             </div>
                     
             <div class="w-100" style="background-color: rgb(221, 120, 120);"></div>
@@ -134,13 +121,13 @@
             <div class="col" style= "height: 40vh;">
                 <!-- div 4x4  -->
                 <div class="row" style="width: 60%; height: 100%; margin: 0 auto; position: relative;">
-                    <div class="col-4" style="height: 12%;"><p style="text-align: center;"><strong>Rotate the camera:</strong></p></div>
-                    <div class="col-8" style="height: 12%;"><p style="text-align: center;"><strong>Control the car:</strong></p></div>
+                    <div class="col-4" style="height: 12%;"><p style="text-align: center;"><strong>Obróć kamerkę:</strong></p></div>
+                    <div class="col-8" style="height: 12%;"><p style="text-align: center;"><strong>Poruszaj się samochodzikiem:</strong></p></div>
                     <div class="w-100"></div>
                     <div class="col-4" style="height: 88%;">
                         <div class="row" style="height: 96%;">
                             <div class="col cell" style="height: 25%;">
-                                <button class="btn btn-outline-dark btn-custom" title="Rotate Up" value="" >
+                                <button class="btn btn-outline-dark btn-custom" title="Obróć w górę" value="" >
                                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" fill="currentColor" class="bi bi-arrow-bar-up" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd" d="M8 10a.5.5 0 0 0 .5-.5V3.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 3.707V9.5a.5.5 0 0 0 .5.5zm-7 2.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5z"/>
                                       </svg>
@@ -148,7 +135,7 @@
                             </div>
                             <div class="w-100"></div>
                             <div class="col cell" style="height: 25%;">
-                                <button class="btn btn-outline-dark btn-custom" title="Rotate Down" value="">
+                                <button class="btn btn-outline-dark btn-custom" title="Obróć w dół" value="">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" fill="currentColor" class="bi bi-arrow-bar-down" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd" d="M1 3.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13a.5.5 0 0 1-.5-.5zM8 6a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 .708-.708L7.5 12.293V6.5A.5.5 0 0 1 8 6z"/>
                                       </svg>
@@ -156,7 +143,7 @@
                             </div>
                             <div class="w-100"></div>
                             <div class="col cell" style="height: 25%;">
-                                <button class="btn btn-outline-dark btn-custom" title="Rotate to the Left" value="" >
+                                <button class="btn btn-outline-dark btn-custom" title="Obróć w lewo" value="" >
                                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" fill="currentColor" class="bi bi-arrow-bar-left" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd" d="M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5zM10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5z"/>
                                       </svg>
@@ -164,7 +151,7 @@
                             </div>
                             <div class="w-100"></div>
                             <div class="col cell" style="height: 25%;">
-                                <button class="btn btn-outline-dark btn-custom" title="Rotate to the Right" value="" >
+                                <button class="btn btn-outline-dark btn-custom" title="Obróć w prawo" value="" >
                                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="34" fill="currentColor" class="bi bi-arrow-bar-right" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd" d="M6 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L12.293 7.5H6.5A.5.5 0 0 0 6 8zm-2.5 7a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5z"/>
                                       </svg>
@@ -193,7 +180,7 @@
                             
                             <!-- 2: Up-->
                             <div class='col-xs-12 col-md-4 col-sm-2 cell'>
-                                <button class="btn btn-outline-dark btn-custom" title="Up" value="">
+                                <button class="btn btn-outline-dark btn-custom" title="Przod" value="">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="36" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
                                         <path d="M7.247 4.86l-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
                                     </svg>
@@ -216,7 +203,7 @@
                             
                             <!-- 4: Left -->
                             <div class='col-xs-12 col-md-4 col-sm-2 cell'>
-                                <button class="btn btn-outline-dark btn-custom" title="Left" value="">
+                                <button class="btn btn-outline-dark btn-custom" title="Lewo" value="">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="36" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
                                         <path d="M3.86 8.753l5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
                                         </svg>
@@ -234,7 +221,7 @@
                             
                             <!-- 6: Right -->
                             <div class='col-xs-12 col-md-4 col-sm-2 cell'>
-                                <button class="btn btn-outline-dark btn-custom" title="Right" value="">
+                                <button class="btn btn-outline-dark btn-custom" title="Prawo" value="">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="36" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
                                         <path d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
                                         </svg>
@@ -246,7 +233,7 @@
                             
                             <!-- 8: Back -->
                             <div class='col-xs-12 col-md-4 col-sm-2 cell'>
-                                <button class="btn btn-outline-dark btn-custom" title="Back" value="">
+                                <button class="btn btn-outline-dark btn-custom" title="Tył" value="">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="36" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
                                         <path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
                                         </svg>
